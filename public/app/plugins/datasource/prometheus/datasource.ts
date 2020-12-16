@@ -91,8 +91,20 @@ export class PrometheusDatasource extends DataSourceApi<PromQuery, PromOptions> 
     return query.expr;
   }
 
-  _addTracingHeaders(httpOptions: PromQueryRequest, options: DataQueryRequest<PromQuery>) {
+  _addHeaders(httpOptions: PromQueryRequest, options: DataQueryRequest<PromQuery>) {
     httpOptions.headers = {};
+    this._addContextHeader(httpOptions);
+    this._addTracingHeaders(httpOptions, options);
+  }
+
+  _addContextHeader(httpOptions: PromQueryRequest) {
+    const contextId = new URLSearchParams(window.location.search).get('contextId');
+    if (contextId) {
+      httpOptions.headers['x-context-id'] = contextId;
+    }
+  }
+
+  _addTracingHeaders(httpOptions: PromQueryRequest, options: DataQueryRequest<PromQuery>) {
     const proxyMode = !this.url.match(/^http/);
     if (proxyMode) {
       httpOptions.headers['X-Dashboard-Id'] = options.dashboardId;
@@ -375,7 +387,7 @@ export class PrometheusDatasource extends DataSourceApi<PromQuery, PromOptions> 
     const adjusted = alignRange(start, end, query.step, this.timeSrv.timeRange().to.utcOffset() * 60);
     query.start = adjusted.start;
     query.end = adjusted.end;
-    this._addTracingHeaders(query, options);
+    this._addHeaders(query, options);
 
     return query;
   }
