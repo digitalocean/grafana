@@ -3167,6 +3167,11 @@
   resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-4.0.0.tgz#2cda79ffd67b6ea919a63b5e1a883b92d636e844"
   integrity sha512-bOoFoTxuEUuri/v1q0OXN0HIrZ2EiZlRSKdveU8vS5xf2+g0TmpXhmxkTc1s+XWR5xZNoVU4uvf/Mher98tfLw==
 
+"@braintree/sanitize-url@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-6.0.1.tgz#45ff061b9ded1c6e4474b33b336ebb1b986b825a"
+  integrity sha512-zr9Qs9KFQiEvMWdZesjcmRJlUck5NR+eKGS1uyKk+oYTWwlYrsoPEi6VmG6/TzBD1hKCGEimrhTgGS6hvn/xIQ==
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
@@ -9655,7 +9660,7 @@ caniuse-api@^3.0.0:
 caniuse-db@1.0.30000772:
   version "1.0.30000772"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000772.tgz#51aae891768286eade4a3d8319ea76d6a01b512b"
-  integrity sha1-UarokXaChureSj2DGep21qAbUSs=
+  integrity sha512-/gDW6YCHWuFSWtogtqzaKvELY7kpce1XdVrJ5Fpyphb+bQbc/1O1SYx30nhyLfUPyioW+rKKNhTx/38UEqEl3g==
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001020, caniuse-lite@^1.0.30001035, caniuse-lite@^1.0.30001093:
   version "1.0.30001104"
