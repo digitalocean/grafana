@@ -102,7 +102,7 @@ export class PrometheusDatasource extends DataSourceApi<PromQuery, PromOptions> 
     if (contextId) {
       httpOptions.headers['x-context-id'] = contextId;
     }
-    const contextUrn = new URLSearchParams(window.location.search).get('contexUrn');
+    const contextUrn = new URLSearchParams(window.location.search).get('contextUrn');
     if (contextUrn) {
       httpOptions.headers['x-context-urn'] = contextUrn;
     }
